@@ -1,0 +1,69 @@
+/* StudentProfileTab.css */
+
+/* Container styling */
+.student-profile-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ddd; /* Grey background */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+  }
+
+  h2 {
+    text-align: center;
+  }
+  /* Form styling */
+  .student-profile-form {
+    max-width: 400px;
+    margin: auto auto;
+    height: 500px;
+  }
+  
+  .student-profile-form h2 {
+    margin-bottom: 20px;
+    color: #a40000; /* Crimson */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Dark grey */
+  }
+  
+  .form-group select { /* Dropdowns */
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #AC2B37FF; /* Highlight color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(150, 29, 41)/* Darker highlight color on hover */
+  }
+  
+  /* Optional: Styling for success message */
+  .success-message {
+    color: #000000; /* Highlight color */
+    margin-top: 30px;
+    text-align: center;
+  }
+  

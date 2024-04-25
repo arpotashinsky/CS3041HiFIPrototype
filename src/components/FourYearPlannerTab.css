@@ -1,0 +1,295 @@
+/* Container styling */
+.four-year-planner {
+  display: flex;
+  flex-direction: row;
+  color: #333; /* Default text color */
+  background-color: #ddd; /* Grey background */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+  height: 560px;
+}
+
+h2{
+  font-size: 22px;
+}
+.course-catalog {
+  flex: 1;
+  width: 33.33%;
+  padding-right: 20px;
+  height: 540px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-color: white;
+}
+
+.student-schedule {
+  flex: 2;
+  width: 66.67%;
+  border-radius: 5px;
+  background-color: white;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.student-schedule table {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.student-schedule th,
+.student-schedule td {
+  padding: 2px;
+  text-align: center;
+  vertical-align: center;
+}
+
+/* Add more space between the course name and term badges */
+.course-name {
+  flex: 1; /* Use flexbox to make the course name take up remaining space */
+}
+
+.terms-available {
+  margin-left: 10px; /* Adjust the left margin to add more space */
+}
+
+.student-schedule th {
+  background-color: #f2f2f2;
+  
+}
+
+.student-schedule th {
+  background-color: #f2f2f2;
+  
+}
+
+.student-schedule td tr:hover {
+  background-color: rgb(227, 227, 227);
+  border: 1px solid #ddd;
+}
+
+.highlighted-term {
+  border: 2px solid blue;
+}
+
+.unavailable-course {
+  background-color: #ffd3d3;
+}
+
+.department-button {
+  background-color: #fff;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+
+}
+
+.department-button:hover{
+  background-color: rgb(227, 227, 227);
+  border: none;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.course-option{
+  display: grid;
+  grid-template-columns:inherit; 
+}
+
+.red-highlight {
+  background-color: rgb(255, 236, 205);
+}
+
+/* Term Badge Container */
+.term-badge-container {
+  display: flex; /* Change display to flex */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100%; /* Set height to 100% */
+}
+
+/* Adjust margin for the term badges in legend */
+.term-badge-container.legend {
+  margin-left: auto;
+}
+
+.legend {
+  justify-content: center; /* Center horizontally */
+}
+
+.term-badge {
+  display: inline-block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.term-badge span {
+  font-size: 12px;
+  vertical-align: center;
+  float:left;
+}
+
+.term-a {
+  background-color: #bcf9c4;
+  color: black;
+}
+
+.term-b {
+  background-color: #bcf9c4;
+  color: black;
+}
+
+.term-c {
+  background-color: #bcf9c4;
+  color: black;
+}
+
+.term-d {
+  background-color: #bcf9c4;
+  color: black;
+}
+
+.course-catalog li {
+  display: flex; /* Change to flex to align items */
+  padding: 2px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.course-catalog li .term-badge-container {
+  float: right;
+  vertical-align: center;
+}
+
+.term-badge-container {
+  margin-left: auto; /* Move the term badges to the right */
+}
+
+/* Adjust margin for the legend items */
+.legend-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Add margin to separate legend items */
+}
+
+.legend-square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.legend-text {
+  margin-right: 20px;
+}
+
+.legend {
+  margin-top: 10px;
+}
+/* Adjust margin for the term badges in legend */
+.term-badge-container.legend {
+  margin-left: auto;
+}
+.legend-container {
+  justify-content: center;
+}
+
+.difficulty-indicators-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.difficulty-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 10%;
+  margin-right: 5px;
+}
+
+.difficulty-beginner { background-color: green; }
+.difficulty-intermediate { background-color: orange; }
+.difficulty-advanced { background-color: red; }
+
+.highlighted-course {
+  background-color: rgb(180, 180, 180);
+}
+
+.toggle-button {
+  background-color: rgb(243, 243, 243); /* Green */
+  border: 1px solid rgb(192, 192, 192);
+  color: black;
+  display:block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 3px;
+  margin: auto; /* Center the button horizontally */
+  margin-top: -2%;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.toggle-button:hover {
+  background-color: #e8e7e7; /* Darker Green */
+}
+
+.student-schedule.toggle-button {
+  justify-content: center;
+}
+
+.student-schedule{
+  justify-content: center;
+}
+
+.selected-course {
+  background-color: rgb(227, 227, 227);
+}
+
+.toggle-button-Advanced {
+  background-color: antiquewhite;
+  border: 1px solid rgb(235, 218, 199);
+  margin: auto; /* Center the button horizontally */
+  display: block; /* Ensure the button takes the full width of its container */
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.toggle-button-Advanced:hover{
+  background-color: rgb(234, 228, 221);
+  border: 1px solid rgb(235, 218, 199);
+  margin: auto; /* Center the button horizontally */
+  display: block; /* Ensure the button takes the full width of its container */
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.advanced-courses-container {
+  text-align: center;
+}

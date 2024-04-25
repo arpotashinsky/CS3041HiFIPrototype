@@ -1,0 +1,249 @@
+/* TrackingSheetTab.css */
+
+/* Container styling */
+.tracking-sheet {
+  display: flex;
+  flex-direction: column;
+  color: #333; /* Default text color */
+  background-color: #ddd; /* Grey background */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Catalog and table styling */
+.catalog-and-table {
+  display: flex;
+}
+
+.course-catalog,
+.requirements {
+  flex: 1;
+  font-size: smaller;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+  color: #333; /* Default text color */
+  border-radius: 0; /* Remove rounded edges */
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border-collapse:separate;
+}
+
+.course-catalog{
+  width: 40%;
+}
+.requirement-table {
+  margin-right: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.requirement-table th,
+.requirement-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  height: 9px;
+  white-space: nowrap;
+  width: 250px;
+}
+
+.requirement-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Tooltip styling */
+.requirement-table td[title] {
+  position: relative;
+}
+
+.requirement-table td[title]::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: black;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0.3s ease;
+  transition-delay: 3s;
+}
+
+.requirement-table td[title]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 3s;
+}
+
+/* Adjust the styling for the requirement table h3 elements */
+.requirement-table h3 {
+  position: relative; /* Make it a positioning context for the absolute positioned message */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.requirement-table h3::after {
+  content: attr(data-message);
+  position: absolute;
+  top: 103%; /* Position it just below the h3 element with a small gap */
+  left: 0; /* Align it with the left edge of the h3 element */
+  width: 100%; /* Make the message width match the requirement cells */
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  padding: 3px;
+  z-index: 1;
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+.requirement-table h3:hover::after {
+  display: block; /* Show the message when the h3 element is hovered */
+}
+
+.requirement-table table {
+  width: 100%;
+}
+
+.requirement-table .course-cell {
+  position: relative;
+}
+
+.requirement-table .course-cell .dot {
+  position: absolute;
+  left: 85%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container button:focus {
+  outline: none;
+}
+
+.button-container button.active {
+  margin-top: 10px;
+  background-color: #9d5252; /* Accent color */
+  color: #fff;
+}
+
+.button-container button:not(.active) {
+  margin-top: 10px;
+  background-color: #7f7f7f;
+  color: #ffffff;
+}
+
+/* Legend styling */
+.legend-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.legend {
+  display: flex;
+  align-items: right;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.legend span {
+  font-size: 14px;
+}
+
+.completed-course {
+  color: grey;
+}
+
+.completed-course:hover {
+  color: grey;
+  background-color: #fdfdfd;
+  cursor:pointer;
+}
+
+.regular-course:hover {
+  background-color: rgb(227, 227, 227);
+  cursor:pointer;
+
+}
+.warning {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+.selected-course {
+  background-color: rgb(227, 227, 227);
+}
+.course-catalog li:hover {
+  background-color: rgb(227, 227, 227);
+  cursor:pointer;
+}
+
+.course-catalog li{
+  padding: 1px;
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+.course-info {
+  display: flex;
+  justify-content: space-between; /* Separate course name and terms available */
+}
+
+.course-name {
+  /* Left justify the course name */
+}
+
+.terms-available {
+  /* Right justify the terms available */
+  text-align: right;
+}
